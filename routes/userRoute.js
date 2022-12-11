@@ -15,8 +15,8 @@ const router = express.Router()
 router.post("/register", userRegister)
 router.post("/login", userLogin)
 
-router.put("/favourites/add/:id", verifyUser, userAddFavourites)
-router.put("/favourites/remove/:id", verifyUser, userRemoveFavourites)
-router.get("/favourites/get/:id", verifyUser, userGetFavourites)
+router.put("/favourites/add/:id", userAddFavourites)
+router.put("/favourites/remove/:id", userRemoveFavourites)
+router.get("/favourites/get/:id", userGetFavourites)
 
 export default router
